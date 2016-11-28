@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>Movies Insights</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="/css/watson-bootstrap-dark.css">
+	<link rel="stylesheet" href="/css/banner.css">
+	<link rel="stylesheet" href="/css/style-insights.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+
+<body>
+	<header class="_demo--heading">
+		<div class="_demo--container">
+			<a class="wordmark" href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/">
+				<span class="wordmark--left">IBM</span>
+				<span class="wordmark--right">Watson Developer Cloud</span>
+			</a>
+			<nav class="heading-nav" role="menubar">
+				<li class="base--li heading-nav--li" role="presentation">
+					<a class="heading-nav--item" href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/services-catalog.html" role="menuitem">
+						Services
+					</a>
+				</li>
+				<li class="base--li heading-nav--li" role="presentation">
+					<a class="heading-nav--item" href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/" role="menuitem">
+						Docs
+					</a>
+				</li>
+				<li class="base--li heading-nav--li" role="presentation">
+					<a class="heading-nav--item" href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/starter-kits.html" role="menuitem">
+						Starter Kits
+					</a>
+				</li>
+				<li class="base--li heading-nav--li" role="presentation">
+					<a class="heading-nav--item" href="https://developer.ibm.com/watson/" role="menuitem">
+						Community
+					</a>
+				</li>
+			</nav>
+		</div>
+	</header>
+  
+  
+	<div class="_demo--banner">
+		<div class="_demo--container">
+			<div class="banner--service-icon-container">
+				<img class="banner--service-icon" src="images/app.png" alt="Movies Insights API Icon" />
+			</div>
+			<div class="banner--service-info">
+				<h1 class="banner--service-title base--h1">
+					<img class="banner--service-icon_INLINE" src="images/app.png" alt="Movies Insights API Icon"> Movies Insights
+				</h1>
+				<div class="banner--service-description">
+					Movie Insights é um aplicativo Node.js simples que utiliza o <b>IBM Personality Insights</b> para analizar sinopses de filmes e obter características que ajude a compreender as motivações por trás dos interesses dos espectadores na hora de decidir que filme assistir.
+				</div>
+			</div>
+		</div>
+	</div>  
+  
+
+	<div style="display:none;" class="container-genres _demo--container">
+		<div style="display:none;" class="loading-genres text-center loading">
+			<h2>&nbsp;</h2>
+			<img src="images/watson.gif">
+		</div>
+		
+		<h2 class="title-genres base--h2">Escolha um Gênero de Filme</h2>
+		
+		<div class="tab-panels list-genres" role="tabpanel">
+		</div>
+	</div>
+  
+  
+	<div style="display:none;" class="container-movies _demo--container">
+		<div style="display:none;" class="loading-movies text-center loading">
+			<h2>&nbsp;</h2>
+			<img src="images/watson.gif">
+		</div>
+		
+		<h2 style="display:none;" class="title-movies base--h2">Escolha um Filme</h2>
+		
+		<div style="display:none;" class="list-movies tab-panels movies" role="tabpanel">
+		</div>
+	</div>
+ 
+ 
+	<div style="display:none;" class="container-synopsis _demo--bg-container">
+		<div class="_demo--container">
+			<div style="display:none;" class="loading-synopsis text-center loading">
+	  			<h2>&nbsp;</h2>
+	  			<img src="images/watson.gif">
+			</div>
+			
+			
+			<div style="display: none;" class="form-group row error">
+				<h2>&nbsp;</h2>
+				<div class="well">
+					<p class="errorMsg"></p>
+					<div style="display:none;margin-bottom:10px;" class="captcha">
+						<div data-sitekey="6LcRbQkTAAAAAGUFVbnuqDfse-XZASLZwoC34oJV" class="g-recaptcha"></div>
+					</div>
+				</div>
+			</div>
+        
+				
+			<div class="content-synopsis _content">
+				<h3 class="base--h3 output--header">Movie Insights</h3>
+        
+		        <div class="error" style="display: none;">
+		          <p class="error--message">Error!</p>
+		        </div>
+		        
+				<div class="output" style="display: block;">
+					<p class="base--p">As pontuações que você vê são todas porcentagens. Elas estão comparando o texto da sinopse com informações provinentes de uma população mais ampla. Por exemplo, 90% em Extroversão não significa que a sinopse é 90% extrovertida. Isso significa que para essa única característica, a meneira que o texto foi escrito apresenta características que o fazem mais extrovertido do que 90% das analises baseadas nas pessoas na população.</p>
+		              
+					<div class="output-summary">
+						<div class="output-summary--left">
+							<h4 class="title-synopsis base--h4"></h4>
+							<div id="personalitySummary" class="output-summary--summary">
+								<p class="text-synopsis base--p"></p>
+							</div>
+						</div>
+						
+						
+						<div class="output-summary--right">
+						
+						<div class="output-summary--consumption-behaviors--section">
+							<h4 class="base--h4">Data Behind Synopsis</h4>
+           					<div style="display: none;" class="col555px output-summary--likely-behaviors traits"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="hidden">
+		<div id="header-template">
+			<div class="row theader">
+				<div class="col-lg-7 col-xs-7">
+					<span>Name</span>
+            	</div>
+            	<div class="col-lg-5 col-xs-5 text-right">
+            		<span>Value</span>
+           		</div>
+       		</div>
+   		</div>
+        <div id="trait-template">
+        	<div class="row">
+        		<div class="tname col-lg-7 col-xs-7">
+        			<span></span>
+        		</div>
+        		<div class="tvalue col-lg-5 col-xs-5 text-right">
+        			<span></span>
+        		</div>
+       		</div>
+   		</div>
+   		<div id="model-template">
+   			<div class="row">
+   				<div class="col-lg-12 col-xs-12 text-center">
+   					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/2.10.0/d3.v2.min.js"></script>
+	<script type="text/javascript" src="/js/init.js"></script>
+	<script type="text/javascript" src="/js/personality.js"></script>
+	<script type="text/javascript" src="/js/string-utils.js"></script>
+	<script type="text/javascript" src="/js/i18n.js"></script>
+	<script type="text/javascript" src="/js/textsummary.js"></script>
+	
+	
+</body>
+</html>

@@ -1,0 +1,157 @@
+.tooltip.in {
+  background: rgb(50, 50, 50) none repeat scroll 0% 0%;
+  color: #F7F7F7;
+  padding: 8px;
+  max-width: 400px;
+  margin: 30px;
+}
+
+.btn {
+  height: 2.5em;
+  padding: 0em;
+  margin-bottom: 0em;
+}
+.btn-block {
+  margin-bottom: 0em;
+}
+.content {
+  margin-bottom: 0px;
+}
+
+.wordsCount {
+  padding-bottom: 5px;
+}
+
+.model_title {
+    font-weight: bold;
+    padding-left: 0px;
+    padding-top: 5px;
+}
+
+.model_trait {
+    padding-left: 10px;
+}
+
+.model_name {
+    background-color: #ccc;
+    margin-top: 10px;
+}
+
+.theader {
+    background-color: #bbb;
+    font-weight: bold;
+    padding-left: 0px;
+    padding-bottom: 5px;
+}
+.col555px {
+    height: 555px;
+    overflow: auto;
+}
+
+.errorMsg {
+    font-weight: bold;
+    color: red;
+}
+
+.results > .row {
+  clear: left;
+}
+
+.control-label {
+  font-weight: bold;
+}
+
+#vizcontainer svg {
+  min-width: 480px;
+  width: 100%;
+  height: 100%;
+}
+.sample-radio-list {
+  margin-bottom: 10px;
+}
+.sample-radio-container {
+  display: inline-block;
+  margin-left: 10px;
+}
+input[type="radio"] {
+  margin:3px 5px 0px 0px;
+}
+.buttons-container {
+  margin-top: 15px;
+}
+
+
+/* Movies Insights Layout */
+.list-genres ul,
+.list-movies ul {
+	padding-left: 0rem;
+	text-align:center;
+}
+
+.list-genres ul li,
+.list-movies ul li {
+	display: inline-block;
+	list-style: none;
+	margin: 0rem;
+}
+
+.list-movies ul li {
+	min-height: 325px;
+}
+
+.list-genres ul li img,
+.list-genres ul li figure {
+	width: 100%;
+	cursor: pointer;
+}
+
+.list-movies ul li img {
+	height: 250px;
+	cursor: pointer;4
+	vertical-align: middle;
+}
+
+.list-genres ul li img {
+	transition: 0.15s;
+	background-color: #e0e0e0;
+}
+
+.list-genres ul li figure img:hover,
+.list-movies ul li figure img:hover {
+	box-shadow: 0px 0px 0px 3px #336588;
+}
+
+figcaption {
+	margin-top: 0.0rem;
+	margin-bottom: 1rem;
+}
+
+.title-genres,
+.title-movies {
+	padding-top: 1rem;
+}
+
+.col555px {
+    overflow-x: hidden;
+}
+
+div#header-template div {
+    padding: 0.3rem;
+    margin: 0px;
+}
+
+
+/* Portrait tablets and small desktops */
+@media (max-width: 1200px) {
+    .col555px {
+        height: 100%;
+    }
+}
+
+/* Portrait tablets and phones */
+@media (max-width: 768px) {
+    .title-genres,
+    .title-movies {
+    	padding-left: 1rem;
+	}
+}
