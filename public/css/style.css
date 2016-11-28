@@ -26,10 +26,17 @@
     font-weight: bold;
     padding-left: 0px;
     padding-top: 5px;
+    margin: 0px;
 }
 
 .model_trait {
     padding-left: 10px;
+    margin: 0px;
+}
+
+.model_title div,
+.model_trait div {
+	margin: 0px;
 }
 
 .model_name {
@@ -46,6 +53,7 @@
 .col555px {
     height: 555px;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 .errorMsg {
@@ -129,10 +137,6 @@ figcaption {
 .title-genres,
 .title-movies {
 	padding-top: 1rem;
-}
-
-.col555px {
-    overflow-x: hidden;
 }
 
 div#header-template div {
