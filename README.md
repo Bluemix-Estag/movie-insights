@@ -12,41 +12,41 @@ There are many resources to help you build your first cognitive application with
 
 ## Contents
 
-### File Structure
+### Directory Structure
 .
-+-- app.js
-+-- package.json
-+-- config
-|   +-- error-handler.js
-|   +-- express.js
-|   +-- i18n.js
-|   +-- security.js
-+-- i18n
-|   +-- en.json
-|   +-- es.json
-+-- node_modules
+├── app.js
+├── package.json
+├── config
+│   ├── error-handler.js
+│   ├── express.js
+│   ├── i18n.js
+│   ├── security.js
+├── i18n
+│   ├── en.json
+│   ├── es.json
+├── node_modules
 <!-- ALL MODULES -->
-+-- public
-|   +-- css
-|   |   +-- banner.css
-|   |   +-- style-insights.css
-|   |   +-- style.css
-|   |   +-- watson-bootstrap-dark.css
-|   +-- fonts
-|   |   +-- icon-fonts
-|   |   |   +-- icons.woff
-|   +-- images
-|   |   +-- app.png
-|   |   +-- placeholder_movie.png
-|   |   +-- watson.gif
-|   +-- js
-|   |   +-- i18n.js
-|   |   +-- init.js
-|   |   +-- personality.js
-|   |   +-- string-utils.js
-|   |   +-- textsummary.js
-+-- views
-|   +-- index.ejs
+├── public/
+│   ├── css/
+│   │   ├── banner.css
+│   │   ├── style-insights.css
+│   │   ├── style.css
+│   │   ├── watson-bootstrap-dark.css
+│   ├── fonts/
+│   │   ├── icon-fonts/
+│   │   │   ├── icons.woff
+│   ├── images/
+│   │   ├── app.png
+│   │   ├── placeholder_movie.png
+│   │   ├── watson.gif
+│   ├── js/
+│   │   ├── i18n.js
+│   │   ├── init.js
+│   │   ├── personality.js
+│   │   ├── string-utils.js
+│   │   ├── textsummary.js
+├── views/
+│   ├── index.ejs
 
 ### Personality Insights
 
