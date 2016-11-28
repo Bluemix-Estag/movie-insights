@@ -4,15 +4,11 @@
 
 Movie Insights é um aplicativo Node.js simples que utiliza o <b>IBM Personality Insights</b> para analizar sinopses de filmes e obter características que ajude a compreender as motivações por trás dos interesses dos espectadores na hora de decidir que filme assistir.
 
-There are many resources to help you build your first cognitive application with the iOS SDK:
-- Read the [Readme](README.md)
-- Follow the [QuickStart Guide](docs/quickstart.md)
-- Review a [Sample Application](#sample-applications)
-- Browse the [Documentation](http://watson-developer-cloud.github.io/ios-sdk/)
+- Movie Insights [App Demo](moviesinsights.mybluemix.net)
 
 ## Contents
 
-Directory structure:
+###Directory structure:
 ```
 ├── app.js
 ├── package.json
