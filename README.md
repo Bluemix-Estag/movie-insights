@@ -12,8 +12,8 @@ There are many resources to help you build your first cognitive application with
 
 ## Contents
 
-### Directory Structure
-.
+Directory structure:
+```
 ├── app.js
 ├── package.json
 ├── config
@@ -47,6 +47,7 @@ There are many resources to help you build your first cognitive application with
 │   │   ├── textsummary.js
 ├── views/
 │   ├── index.ejs
+```
 
 ### Personality Insights
 
