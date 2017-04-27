@@ -1,0 +1,7 @@
+---
+applications:
+- name: moviesinsights
+  host: moviesinsights
+  memory: 128M
+  services:
+  - moviesinsights-personality-insights
